@@ -119,9 +119,8 @@ function startVerification() {
             // text.style.display='block'
             
             // استدعاء القفل الآن
-            if (typeof call_locker === "function") {
                 call_locker();
-            }
+         
         } else {
             progress += Math.random() * 3;
             fill.style.width = progress + "%";
