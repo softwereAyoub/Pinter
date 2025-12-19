@@ -1,0 +1,148 @@
+/* Reset & Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    background-color: #0f172a;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: screen; /* لضمان التوسط */
+
+    padding: 20px;
+}
+
+/* بطاقة المحتوى */
+.card {
+    background-color: #1e293b;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid #334155;
+    text-align: center;
+}
+
+/* قسم المعاينة */
+.preview-container {
+    position: relative;
+
+    background-color: #0f172a;
+    overflow: hidden;
+}
+
+#dynamic-img {
+    max-width: 100%;
+    max-height: 100%;
+    filter: blur(2px); /* تغبيش الصورة */
+
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle {
+    background: rgba(59, 130, 246, 0.1);
+    padding: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.icon-circle svg { width: 32px; height: 32px; color: #3b82f6; }
+
+/* النصوص */
+.content { padding: 30px; }
+h1 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.file-info { color: #94a3b8; font-size: 13px; margin-bottom: 24px; }
+
+/* صندوق السبونسر */
+.sponsor-box {
+    background-color: rgba(15, 23, 42, 0.5);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.tag {
+    background-color: rgba(234, 179, 8, 0.1);
+    color: #eab308;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.sponsor-box p { font-size: 11px; color: #cbd5e1; line-height: 1.5; }
+
+/* الـ Loader */
+.spinner {
+    width: 35px;
+    height: 35px;
+    border: 3px solid #334155;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    animation: spin 1s linear infinite;
+}
+
+#status-text { font-size: 12px; color: #60a5fa; font-family: monospace; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* الزر */
+button {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+button:hover { background-color: #1d4ed8; transform: translateY(-2px); }
+button:active { transform: scale(0.98); }
+
+.hidden { display: none; }
+.footer-text { margin-top: 30px; color: #475569; font-size: 9px; letter-spacing: 1px; }
+
+
+
+
+
+#progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 15px;
+    margin-top: 10px;
+}
+
+#progress-fill {
+    height: 100%;
+    width: 0%; /* سيتغير برمجياً */
+    background-color: #27ae60; /* لون أخضر جميل */
+    transition: width 0.1s linear;
+}
+
+#progress-text {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
